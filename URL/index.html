@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      const menus = [
+        {
+          title: "Menu",
+          url: "https://yahoo.com",
+          tooltip: "Sample tooltip 1",
+        },
+        {
+          title: "Contact Us",
+          url: "contactus.html",
+          tooltip: "Sample tooltip 2",
+        },
+        {
+          title: "Buy ",
+          url: "https://apple.com",
+          tooltip: "Sample tooltip 3",
+        },
+        {
+          title: "Sell ",
+          url: "https://microsoft.com",
+          tooltip: "Sample tooltip 4",
+        },
+        {
+          title: "About Us ",
+          url: "aboutus.html",
+          tooltip: "Sample tooltip 5",
+        },
+        {
+          title: "Games",
+          url: "https://ea.com",
+          tooltip: "Sample tooltip 6",
+        },
+      ];
+
+      function theHeader(x) {
+        let example = "";
+        for (let i = 0; i < x.length; i++) {
+          example +=
+            "<a style='margin-right:30px' target='_blank' href='" + x[i].url +  "' title='" + x[i].tooltip +  "'> " +  x[i].title +   "</a>";
+        }
+
+        return example;
+      }
+
+      document.getElementById("demo").innerHTML = theHeader(menus);
+    </script>
+  </body>
+</html>
